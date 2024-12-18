@@ -178,6 +178,7 @@ section {
   padding: 5px 0;
   flex: 0 0 calc(200% / 5);
   width:calc(200% / 5);
+  font-size: 9vw;
 }
 .scrolling-text .dots {
   width: 20px;
@@ -220,7 +221,6 @@ section {
   padding-right: 0;
 }
 .projects-section .project {
-  min-width: 60vw;
   position: relative;
 }
 .projects-section .project-title {
@@ -264,9 +264,7 @@ section {
     width:80%;
     height:80%;
   }
-  .projects-section .project {
-    min-width: 125vw
-  }
+
   .scrolling-text .dots {
     width: 10px;
     height: 10px;
@@ -279,5 +277,12 @@ section {
   .banner-section .container{
     min-height: 50vh;
   }
-
+   .scroll-circle{
+    width: 100px;
+    height: 100px;
+  }
+  .scroll-mouse {
+      width: 39px;
+      height: 70px;
+  }
 }

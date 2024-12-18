@@ -43,7 +43,7 @@ export default function Projects() {
 
   const projectList = projects.map((project) => {
     return (
-      <div className="project" key={project.id}>
+      <div className="basis-1/2 project" key={project.id}>
         <a href={project.link}></a>
         <div className="image-wrap relative">
           <div className="overlay font-bold text-2xl flex items-center justify-center underline">
@@ -80,7 +80,9 @@ export default function Projects() {
               Featured Works<span className="dots"></span>
             </div>
           </div>
-          <div className=" work-list flex">{projectList}</div>
+          <div className="work-list grid grid-cols-1 md:grid-cols-2 mx-auto gap-4">
+            {projectList}
+          </div>
         </div>
       </section>
     </>

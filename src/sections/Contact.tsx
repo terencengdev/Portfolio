@@ -5,7 +5,7 @@ export default function Contact() {
   return (
     <>
       <section
-        className="py-36 text-center contact-section overflow-hidden flex align-center justify-center flex-col"
+        className="py-24 lg:py-36 text-center contact-section overflow-hidden flex align-center justify-center flex-col"
         id="Contact"
       >
         <div className="small-text text-base/tight md:text-xl/tight lg:text-2xl/tight font-bold ">

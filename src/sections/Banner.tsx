@@ -49,7 +49,7 @@ export default function Banner() {
             <div className="small-text text-base/tight md:text-xl/tight lg:text-2xl/tight font-bold ">
               Hola! I'm Terence <span className="waving-hand">👋</span>
             </div>
-            <div className="big-title text-5xl/tight md:text-6xl/tight lg:text-8xl/tight	font-bold ">
+            <div className="big-title text-4xl/tight md:text-6xl/tight lg:text-8xl/tight	font-bold ">
               <ScrambleSkills></ScrambleSkills>
             </div>
           </h1>

@@ -28,10 +28,63 @@ function App() {
 
   useGSAP(
     () => {
+      let mm = gsap.matchMedia();
+
       // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
       lenis.on("scroll", ScrollTrigger.update);
 
       gsap.registerPlugin(ScrollTrigger);
+
+      gsap.fromTo(
+        ".banner-title .small-text",
+        {
+          opacity: 0,
+          y: 200,
+        },
+        {
+          opacity: 1,
+          duration: 1.5,
+          ease: "power4.out",
+          y: 0,
+        }
+      );
+      gsap.fromTo(
+        ".banner-title .big-title",
+        {
+          opacity: 0,
+        },
+        {
+          duration: 1,
+          opacity: 1,
+        }
+      );
+
+      gsap.to(".banner-title", {
+        yPercent: 50,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".banner-section",
+          start: "+=50",
+          end: "+=300",
+          scrub: true,
+        },
+      });
+
+      gsap.fromTo(
+        ".about-text",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          scrollTrigger: {
+            trigger: ".about-section",
+            start: "20%",
+            end: "+=300",
+            scrub: true,
+          },
+        }
+      );
 
       gsap.fromTo(
         ".terence-img .circle",
@@ -63,6 +116,36 @@ function App() {
           },
         }
       );
+
+      mm.add("(max-width: 767px)", () => {
+        // desktop setup code here...
+
+        gsap.fromTo(
+          ".terence-img",
+          {
+            x: "0",
+            y: "-55vh",
+            scale: 1.5,
+          },
+          {
+            x: "0",
+            y: 0,
+            scale: 1,
+            borderRadius: "50%",
+            scrollTrigger: {
+              trigger: ".about-section",
+              start: "top -50%",
+              end: "+=300",
+              scrub: true,
+            },
+          }
+        );
+
+        return () => {
+          // optional
+          // custom cleanup code here (runs when it STOPS matching)
+        };
+      });
       let tl = gsap.timeline({
         scrollTrigger: {
           scrub: true,
@@ -99,26 +182,20 @@ function App() {
           },
         }
       );
-    },
-    { scope: container }
-  ); // <-- scope is for selector text (optional)
-
-  useGSAP(
-    () => {
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.to(".projects-section .work-list", {
-        scrollTrigger: {
-          // scroller: pageContainer, //locomotive-scroll
-          scrub: true,
-          trigger: ".projects-section",
-          pin: true,
-          // anticipatePin: 1,
-          start: "top -10%",
-          end: "bottom 50%",
-        },
-        x: -2000,
-        ease: "none",
-      });
+      // var panels = gsap.utils.toArray(".work-list");
+      // gsap.to(".projects-section .work-list", {
+      //   scrollTrigger: {
+      //     // scroller: pageContainer, //locomotive-scroll
+      //     scrub: true,
+      //     trigger: ".projects-section",
+      //     pin: true,
+      //     // anticipatePin: 1,
+      //     start: "top -10%",
+      //     end: "bottom 50%",
+      //   },
+      //   x: -2000,
+      //   ease: "none",
+      // });
     },
     { scope: container }
   ); // <-- scope is for selector text (optional)

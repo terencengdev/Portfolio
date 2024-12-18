@@ -11,7 +11,7 @@ export default function About() {
       >
         <div></div>
         <div className="flex lg:flex-nowrap md:flex-no-wrap flex-wrap   gap-4 items-center justify-center ">
-          <div className="order-last lg:order-first w-1/2	flex-auto">
+          <div className="about-text order-last lg:order-first w-1/2	flex-auto">
             <div className="about-title title mb-4 text-2xl md:text-3xl lg:text-4xl font-medium">
               About Terence
             </div>
