@@ -1,5 +1,3 @@
-import React, { useState, useRef } from "react";
-
 import etch from "/assets/projects/etch.png";
 import fca from "/assets/projects/fca.png";
 import upskilling from "/assets/projects/upskilling.png";

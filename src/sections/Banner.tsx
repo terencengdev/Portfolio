@@ -1,15 +1,13 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useScramble } from "use-scramble";
 
 export default function Banner() {
   const [skillIndex, setSkillIndex] = useState(0);
-  const intervalRef = useRef(null);
+  const intervalRef = useRef<number>(0);
   const container = useRef(null);
   gsap.registerPlugin(useGSAP);
-
-  let pageWrapper = document.querySelector(".banner-section");
 
   // hook returns a ref rotating text
   let skills_texts = [

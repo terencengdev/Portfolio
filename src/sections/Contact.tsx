@@ -1,4 +1,3 @@
-import React, { useState, useRef } from "react";
 import { SocialIcons } from "../components/SocialIcons";
 
 export default function Contact() {

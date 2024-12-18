@@ -1,5 +1,3 @@
-import { div } from "three/tsl";
-
 export function SocialIcons() {
   const socialData = [
     {

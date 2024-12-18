@@ -1,5 +1,3 @@
-import React, { useState, useRef } from "react";
-
 import terenceng from "/assets/terenceng.png";
 
 export default function About() {
