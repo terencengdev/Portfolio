@@ -9,3 +9,5 @@ React.js
 Typescript
 Vite
 Tailwind CSS
+
+Deploymment -  GitHub
