@@ -55,7 +55,7 @@ function App() {
       );
 
       gsap.to(".banner-title", {
-        yPercent: 50,
+        yPercent: 100,
         ease: "none",
         scrollTrigger: {
           trigger: ".banner-section",
