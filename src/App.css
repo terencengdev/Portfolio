@@ -1,0 +1,283 @@
+section {
+  padding:0 20px;
+}
+@keyframes waving-hand  {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+ @-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+
+.heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+.dark-btn {
+  border-width: 2px;
+  color:#fff;
+}
+.black-btn {
+  background-color: black;
+}
+.dark-btn:hover {
+    border-color: #000;
+    color: #000;
+    background-color: #fff;
+}
+.banner-section {
+  min-height: 100vh;
+}
+.banner-title .small-text{
+  color:#909090;
+}
+.banner-title .big-title {
+  color:#000;
+}
+.waving-hand {
+  animation: 2.5s ease waving-hand infinite;
+  transform-origin:70% 70%;
+  display: inline-block;
+}
+.scroll-circle {
+  position: fixed;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom:10px;
+  right: 10px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 50%;
+}
+.scroll-circle > img {
+  -webkit-animation: rotate-center 4s linear infinite both;
+  animation: rotate-center 4s linear infinite both;
+}
+.scroll-mouse {
+  position: absolute;
+  width: 49px;
+  height: 80px;
+}
+.scrolling-text {
+  width: 200vw;
+}
+.marquee__item {
+  animation-duration: 8s ;
+  animation-iteration-count: infinite ;
+  animation-name: marquee-content ;
+  animation-timing-function: linear ;
+  padding: 5px 0;
+  flex: 0 0 calc(200% / 5);
+  width:calc(200% / 5);
+}
+.scrolling-text .dots {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-left: 40px;
+  position: absolute;
+  right: 0;
+}
+.marquee:hover .marquee__item {
+  animation-play-state: paused ;
+}
+@keyframes marquee-content {
+	/* Element one fully ON screen at left-edge of container. */
+	from {
+		transform: translateX( 0% );
+	}
+	/* Element one fully OFF screen (just beyond left-ledge of container). */
+	to {
+		transform: translateX( -100% );
+	}
+}
+.terence-img img{
+  /* transform: translateY(-50%) translateX(-20%); */
+  border-radius: 50%;
+}
+.terence-img .circle {
+  z-index: -1;
+  position: absolute;
+  background: #000;
+  height: 85%;
+  width: 85%;
+  border-radius: 50%;
+  top: 20%;
+}
+/* Project Section */
+.projects-section{
+  padding-left: 0;
+  padding-right: 0;
+}
+.projects-section .project {
+  min-width: 60vw;
+  position: relative;
+}
+.projects-section .project-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#000;
+}
+.projects-section .project .overlay{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color:#fff;
+  display: flex;
+  transition: all ease .4s;
+  opacity: 0;
+}
+.projects-section .project:hover .overlay {
+  border-radius: 0;
+  opacity: 1;
+}
+.projects-section .project a {
+  position: absolute;
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+#Contact  .small-text{
+  color:#909090;
+}
+@media screen and (max-width:768px) {
+  .banner-section {
+    min-height: 90vh;
+  }
+  .terence-img .circle {
+    width:80%;
+    height:80%;
+  }
+  .projects-section .project {
+    min-width: 125vw
+  }
+  .scrolling-text .dots {
+    width: 10px;
+    height: 10px;
+    right: -5px;
+  }
+  .scroll-circle { 
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  .banner-section .container{
+    min-height: 50vh;
+  }
+
+}
