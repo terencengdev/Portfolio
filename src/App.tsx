@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 
 import "./App.css";
+import Header from "./sections/Header.tsx";
 import Banner from "./sections/Banner.tsx";
 import About from "./sections/About.tsx";
 import Projects from "./sections/Projects.tsx";
@@ -196,7 +197,8 @@ function App() {
   ); // <-- scope is for selector text (optional)
 
   return (
-    <main ref={container} className="main-container">
+    <main ref={container} className="dark:bg-black main-container">
+      <Header />
       <Banner />
       <About />
       <Projects />

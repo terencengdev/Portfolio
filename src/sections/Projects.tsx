@@ -44,13 +44,13 @@ export default function Projects() {
       <div className="basis-1/2 project" key={project.id}>
         <a href={project.link}></a>
         <div className="image-wrap relative">
-          <div className="overlay font-bold text-2xl flex items-center justify-center underline">
+          <div className="overlay bg-black dark:bg-white text-white dark:text-black font-bold text-2xl flex items-center justify-center underline">
             Visit Site
           </div>
           <img className="mb-5" src={project.image} />
         </div>
 
-        <div className="font-bold project-title flex items-center justify-center">
+        <div className="font-bold text-black dark:text-white project-title flex items-center justify-center">
           {project.title}
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function Projects() {
         id="Projects"
       >
         <div className="pin-wrap">
-          <div className="scrolling-text flex flex mb-10 text-5xl md:text-7xl lg:text-9xl font-bold">
+          <div className="scrolling-text text-black dark:text-white flex flex mb-10 text-5xl md:text-7xl lg:text-9xl font-bold">
             <div className="marquee__item flex items-center justify-center projects-title">
               Featured Works<span className="dots"></span>
             </div>

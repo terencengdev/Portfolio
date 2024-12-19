@@ -115,14 +115,15 @@ section {
             animation-timing-function: ease-out;
   }
 }
-
+* {
+  transition:color 0.1s,background-color 0.3s ease ;
+}
 .heartbeat {
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;
 }
 .dark-btn {
   border-width: 2px;
-  color:#fff;
 }
 .black-btn {
   background-color: black;
@@ -130,16 +131,34 @@ section {
 .dark-btn:hover {
     border-color: #000;
     color: #000;
-    background-color: #fff;
+}
+header.is-sticky {
+  background-color: rgba(255,255,255,0.6);
+}
+.dark header.is-sticky {
+  background-color: rgba(0,0,0,0.6);
+}
+header .logo {
+  color:black;
+} 
+header .toggle-dark-mode {
+  border:1px solid #000;
+  width: 35px;
+  height: 35px;
+  border-radius: 3em;
+  padding: 0;
+}
+header .toggle-dark-mode svg {
+  fill:white;
+}
+.dark .toggle-dark-mode svg {
+  fill:black;
 }
 .banner-section {
   min-height: 100vh;
 }
 .banner-title .small-text{
-  color:#909090;
-}
-.banner-title .big-title {
-  color:#000;
+  color:#bbb;
 }
 .waving-hand {
   animation: 2.5s ease waving-hand infinite;
@@ -189,6 +208,9 @@ section {
   position: absolute;
   right: 0;
 }
+.dark .scrolling-text .dots {
+  background-color: #fff;
+}
 .marquee:hover .marquee__item {
   animation-play-state: paused ;
 }
@@ -209,7 +231,6 @@ section {
 .terence-img .circle {
   z-index: -1;
   position: absolute;
-  background: #000;
   height: 85%;
   width: 85%;
   border-radius: 50%;
@@ -227,7 +248,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  color:#000;
 }
 .projects-section .project .overlay{
   position: absolute;
@@ -235,8 +255,6 @@ section {
   bottom:0;
   left: 0;
   right: 0;
-  background-color: #000;
-  color:#fff;
   display: flex;
   transition: all ease .4s;
   opacity: 0;
