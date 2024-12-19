@@ -34,7 +34,7 @@ export default function Header() {
     <header className="w-full fixed z-10">
       <div className="container  max-w-7xl py-3 items-center mx-auto flex justify-between">
         <a
-          href="/"
+          href="/portfolio-v1"
           className="text-black dark:text-white logo text-6xl font-bold"
         >
           TN
